@@ -1,4 +1,4 @@
-epci = function(txt, cf = .95, extended = TRUE){
+epci = function(txt, cf = .95, extended = FALSE){
     
     # Print CI for e2p
     
@@ -11,6 +11,10 @@ epci = function(txt, cf = .95, extended = TRUE){
                                    df2 = par[2], 
                                    conf.level = cf
     )
+    
+    if(length(par) > 3 | length(par) < 3){
+        stop('Could not extract parameters from the sting')
+    }
     
     if (extended == TRUE){
         print(sprintf('F = %f, df1 = %f, df2 = %f', par[3], par[1], par[2]))
