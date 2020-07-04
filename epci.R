@@ -16,6 +16,6 @@ epci = function(txt, cf = .95, extended = TRUE){
         print(sprintf('F = %f, df1 = %f, df2 = %f', par[3], par[1], par[2]))
     }
     
-    print(sprintf('CIe = [%.3f, %.3f]', e$LL, e$UL))
+    print(sprintf('CIη2p = [%.3f, %.3f]', e$LL, e$UL))
 }
 
